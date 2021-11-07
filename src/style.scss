@@ -159,6 +159,10 @@ h1, h2, h3, h4, h5,
 }
 
 .logo-image {
+  .fan {
+    transform-origin: 50% 50%;
+  }
+
   path {
     fill: white;
     -webkit-transition: all .5s ease-in-out;
@@ -167,39 +171,19 @@ h1, h2, h3, h4, h5,
   }
 
   &:hover {
-    @keyframes upDown {
-      0% {
-        transform: translateY(0);
-      }
-      50% {
-        transform: translateY(-3px);
-      }
-      100% {
-        transform: translateY(0);
-      }
-    }
-
-    .mustache {
-      animation: upDown .5s;
-    }
-
-    .hat {
-      animation: upDown .7s;
-    }
-
-    .pipe {
+    .fan {
       @keyframes rot {
         0% {
-          transform: rotate(0) translate(0, 0);
+          transform: rotate(0);
         }
         50% {
-          transform: rotate(0.6deg) translate(-3.5%, -3.5%);
+          transform: rotate(360deg);
         }
         100% {
-          transform: rotate(0) translate(0, 0);
+          transform: rotate(0);
         }
       }
-      animation: rot .5s;
+      animation: rot 1s;
     }
   }
 }
