@@ -57,9 +57,9 @@ module.exports = {
       devMode: 'light',
       prefix: 'static/',
       favicons: {
-        appName: 'K&R Fotoboxen',
-        appDescription: 'K&R Fotoboxen',
-        developerName: 'K&R Fotoboxen',
+        appName: 'K&R Spot Repair',
+        appDescription: 'K&R Spot Repair',
+        developerName: 'K&R Spot Repair',
         lang: "de-DE",
         inject: true,
         start_url: "/",

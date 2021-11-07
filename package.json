@@ -1,7 +1,7 @@
 {
-  "name": "photobooth",
+  "name": "spotrepairwebsite",
   "version": "1.0.0",
-  "description": "Photobooth website",
+  "description": "Spot repair website",
   "author": "Max Röhrl <max.roehrl11@gmail.com>",
   "private": true,
   "scripts": {
