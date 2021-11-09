@@ -31,7 +31,7 @@ AOS.init({
 let answer;
 
 $(document).ready(function ($) {
-  const gFormId = '1FAIpQLSezaHmUh5D56dTf8ewVmvjySH3FB3MpZ2mCkVe8UjOTwn8Xkg';
+  const gFormId = '1FAIpQLSfe8WfxmyK7efmSLMzukCH-TR_F4qQX5tVA2AEXfWXtOhykCA';
   const action = `https://docs.google.com/forms/d/e/${gFormId}/formResponse?`;
   const $body = $('body');
 
