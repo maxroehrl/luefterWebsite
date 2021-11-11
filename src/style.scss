@@ -757,7 +757,41 @@ h1, h2, h3, h4, h5,
   }
 }
 
-.services {
+#faq-section .services {
+  flex-direction: column;
+
+  .service {
+    width: 90%;
+    height: 150px;
+
+    &.active {
+      height: 300px;
+
+      h3 {
+        padding-bottom: 0;
+      }
+
+      .content {
+        border-top: 3px solid gray;
+      }
+    }
+
+    h3 {
+      text-align: left;
+      font-size: 22px;
+
+      &:after, &:before {
+        text-align: center;
+      }
+    }
+
+    .content {
+      transition: 1s border ease-in-out;
+    }
+  }
+}
+
+.services, {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -781,6 +815,10 @@ h1, h2, h3, h4, h5,
     .content {
       padding: 1rem;
       display: none;
+
+      ul {
+        padding: 10px;
+      }
     }
 
     h3 {
@@ -825,7 +863,7 @@ h1, h2, h3, h4, h5,
     }
 
     &.active {
-      height: 600px;
+      height: 700px;
 
       h3:after {
         transform: rotate(180deg);
@@ -850,7 +888,8 @@ h1, h2, h3, h4, h5,
 
 .custom-owl-carousel {
   .carousel {
-    border-top-left-radius: 200px;
+    border-bottom-left-radius: 200px;
+    border-top-right-radius: 200px;
     overflow: hidden;
     -webkit-box-shadow: 0 30px 100px -20px rgba(0, 0, 0, 0.4);
     box-shadow: 0 30px 100px -20px rgba(0, 0, 0, 0.4);
