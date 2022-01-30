@@ -64,8 +64,8 @@ module.exports = {
         inject: true,
         start_url: "/",
         developerURL: null,
-        background: '#6495ed',
-        theme_color: '#6495ed',
+        background: '#ffffff',
+        theme_color: '#202820',
         icons: {
           coast: false,
           yandex: false,
