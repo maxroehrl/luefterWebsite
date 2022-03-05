@@ -219,7 +219,7 @@ h1, h2, h3, h4, h5,
 
         a {
           text-decoration: none !important;
-          padding: 5px 20px;
+          padding: 5px;
           color: #fff;
           display: inline-block;
 
@@ -1161,4 +1161,9 @@ h1, h2, h3, h4, h5,
       text-transform: none;
     }
   }
+}
+
+.cart:before {
+  font-family: "icomoon" !important;
+  content: "\e854";
 }
