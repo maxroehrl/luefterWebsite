@@ -791,7 +791,17 @@ h1, h2, h3, h4, h5,
   }
 }
 
-.services, {
+#videos-section {
+  .service {
+    max-width: 600px;
+    max-height: calc((600px - 20px) * 0.5625);
+    width: calc(100vw - 20px);
+    height: calc((100vw - 20px) * 0.5625);
+    margin: 20px;
+  }
+}
+
+.services {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
