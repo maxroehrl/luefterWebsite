@@ -19,7 +19,7 @@
     "popper.js": "^1.16.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.17.8",
+    "@babel/core": "^7.17.9",
     "@babel/preset-env": "^7.16.11",
     "babel-loader": "^8.2.4",
     "clean-webpack-plugin": "^4.0.0",
@@ -30,12 +30,12 @@
     "favicons-webpack-plugin": "^5.0.2",
     "html-webpack-link-type-plugin": "^1.1.1",
     "html-webpack-plugin": "^5.5.0",
-    "sass": "^1.49.10",
+    "sass": "^1.50.1",
     "sass-loader": "^12.6.0",
     "style-loader": "^3.3.1",
-    "webpack": "^5.71.0",
+    "webpack": "^5.72.0",
     "webpack-cli": "^4.9.2",
-    "webpack-dev-server": "^4.7.4"
+    "webpack-dev-server": "^4.8.1"
   },
   "browserslist": [
     "> 1%",
