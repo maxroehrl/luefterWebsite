@@ -4,6 +4,8 @@ $highlightTransparent: rgba(24, 145, 18, 0.8);
 $highlightTransparent2: rgba(24, 145, 18, 0.3);
 $successColor: #28a745;
 
+$intro-radius: 200px;
+
 $theme-colors: (
   "primary": $highlight,
   "danger": $highlight2,
@@ -526,7 +528,7 @@ h1, h2, h3, h4, h5,
     height: 100%;
     width: 70%;
     background: $highlight;
-    border-bottom-right-radius: 200px;
+    border-bottom-right-radius: $intro-radius;
   }
 
   h1 {
@@ -898,8 +900,8 @@ h1, h2, h3, h4, h5,
 
 .custom-owl-carousel {
   .carousel {
-    border-bottom-left-radius: 200px;
-    border-top-right-radius: 200px;
+    border-bottom-left-radius: $intro-radius;
+    border-top-right-radius: $intro-radius;
     overflow: hidden;
     -webkit-box-shadow: 0 30px 100px -20px rgba(0, 0, 0, 0.4);
     box-shadow: 0 30px 100px -20px rgba(0, 0, 0, 0.4);
@@ -1128,6 +1130,21 @@ h1, h2, h3, h4, h5,
 }
 
 @media (max-width: 991.98px) {
+  .intro-section {
+    $intro-radius: 20vw;
+
+    &:before {
+      border-bottom-right-radius: $intro-radius;
+    }
+
+    &.custom-owl-carousel {
+      .carousel {
+        border-bottom-left-radius: $intro-radius;
+        border-top-right-radius: $intro-radius;
+      }
+    }
+  }
+
   .sticky-wrapper .site-menu-toggle {
     color: #fff;
   }
