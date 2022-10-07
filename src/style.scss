@@ -793,14 +793,26 @@ h1, h2, h3, h4, h5,
   }
 }
 
-#videos-section {
-  .service {
-    max-width: 600px;
-    max-height: calc((600px - 20px) * 0.5625);
-    width: calc(100vw - 20px);
-    height: calc((100vw - 20px) * 0.5625);
-    margin: 20px;
+#partner-section .service {
+  height: 270px;
+  cursor: default;
+
+  img {
+    margin-left: 30px;
+    margin-bottom: 20px;
   }
+
+  h3:after {
+    display: none;
+  }
+}
+
+#videos-section .service {
+  max-width: 600px;
+  max-height: calc((600px - 20px) * 0.5625);
+  width: calc(100vw - 20px);
+  height: calc((100vw - 20px) * 0.5625);
+  margin: 20px;
 }
 
 .services {
