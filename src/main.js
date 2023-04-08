@@ -7,7 +7,11 @@ import 'jquery.easing';
 
 import 'jquery-sticky';
 
-import '@fancyapps/fancybox';
+import { Fancybox } from '@fancyapps/ui';
+import '@fancyapps/ui/dist/fancybox/fancybox.css';
+import { de } from '@fancyapps/ui/dist/fancybox/l10n/de.esm';
+
+Fancybox.bind('[data-fancybox]', { l10n: de });
 
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
