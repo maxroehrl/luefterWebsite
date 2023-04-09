@@ -19,12 +19,20 @@ import './style.scss';
 
 Fancybox.bind('[data-fancybox]', {l10n: de});
 
+if (window.mozInnerScreenX == null) {
 // Initialize the AOS scrolling
-AOS.init({
-  duration: 800,
-  easing: 'slide',
-  once: true
-});
+  AOS.init({
+    startEvent: 'load',
+    duration: 800,
+    easing: 'slide',
+    once: true,
+  });
+} else {
+  // Disable scroll effects for Firefox
+  AOS.init({
+    disable: true,
+  });
+}
 
 let answer;
 
