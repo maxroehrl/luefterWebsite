@@ -16,11 +16,12 @@
         content="Hat auch Ihre Vario-Vent-Lüftung den Geist aufgegeben und funktioniert nicht mehr? Kein Problem! Dank unserer Erfahrung mit Vario Vent System bringen wir wieder frischen Wind in Ihre Lüftung!">
   <meta property="og:url" content="https://luefter-reparatur.de">
   <meta property="og:title" content="K&R Spot Repair - Vario-Vent-Reparatur"/>
-  <meta property="og:image" content="src/static/Ablauf_Reparatur.png"/>
+  <meta property="og:image" content="src/Ablauf_Reparatur.png"/>
   <meta property="og:description"
         content="Hat auch Ihre Vario-Vent-Lüftung den Geist aufgegeben und funktioniert nicht mehr? Kein Problem! Dank unserer Erfahrung mit Vario Vent System bringen wir wieder frischen Wind in Ihre Lüftung!"/>
   <meta name="robots" content="index, follow">
   <meta name="revisit-after" content="7 days"/>
+  <script type="module" src="./main.js"></script>
   <script type="text/javascript">
     var submitted = false;
   </script>
@@ -200,19 +201,19 @@
             </ul>
           </nav>
         </div>
-        <div class="ml-auto">
+        <div class="ml-auto flex-row d-flex">
           <nav class="site-navigation position-relative text-right" role="navigation">
-            <ul class="site-menu main-menu site-menu-dark js-clone-nav mr-auto d-none d-xl-block">
+            <ul class="site-menu main-menu site-menu-dark js-clone-nav d-none d-xl-block">
               <li class="cta">
                 <a href="https://www.ebay.de/usr/chrikirs-1247" class="nav-link" target="_blank">
-                  <span class="cart border bg-danger rounded text-white border-danger">&nbsp;Ebay Shop</span>
+                  <span class="cart border bg-danger rounded text-white border-danger">&nbsp;eBay Shop</span>
                 </a>
               </li>
             </ul>
           </nav>
 
-          <nav class="site-navigation position-relative text-right mt-2" role="navigation">
-            <ul class="site-menu main-menu site-menu-dark js-clone-nav mr-auto d-none d-xl-block">
+          <nav class="site-navigation position-relative text-right" role="navigation">
+            <ul class="site-menu main-menu site-menu-dark js-clone-nav d-none d-xl-block">
               <li class="cta">
                 <a href="https://www.youtube.com/@krspot-repair2614" class="nav-link" target="_blank">
                   <span class="youtube border bg-danger rounded text-white border-danger">&nbsp;YouTube</span>
@@ -228,25 +229,25 @@
       </div>
     </div>
   </header>
-  <div class="intro-section custom-owl-carousel" id="home-section">
+  <div class="intro-section" id="home-section">
     <div class="container">
       <div class="row align-items-center">
         <div class="col-lg-5 mr-auto" data-aos="fade-up">
-          <div class="owl-carousel carousel-text">
-            <div class="slide-text">
+          <div class="f-carousel" id="carousel-text">
+            <div class="f-carousel__slide">
               <h1>Sie sind auf der Suche ...</h1>
               <br>
               <p>...nach einer Möglichkeit ihre VarioVent-Lüftung wieder zum Lüften zu bringen?
                 <br><strong>Das Suchen hat ein Ende!</strong></p>
             </div>
-            <div class="slide-text">
+            <div class="f-carousel__slide">
               <h1>Ob X-Serie...</h1>
               <br>
               <h1>...oder DuoLive?</h1>
               <br>
               <h1><strong>Yes we can!</strong></h1>
             </div>
-            <div class="slide-text">
+            <div class="f-carousel__slide">
               <h1>Raumklima retten ...</h1>
               <br>
               <h1>...war nie einfacher!</h1>
@@ -254,14 +255,10 @@
           </div>
         </div>
         <div class="col-lg-6 ml-auto" data-aos="fade-up" data-aos-delay="100">
-          <div class="owl-carousel carousel">
-            <img src="static/images/Ablauf_Reparatur.png" alt="Image" class="img-fluid">
-            <img src="static/images/Ueberblick_Varianten.PNG" alt="Image" class="img-fluid">
-            <img src="static/images/Ueberblick_Service.PNG" alt="Image" class="img-fluid">
-          </div>
-          <div class="owl-custom-direction">
-            <a href="#" class="custom-prev"><span class="icon-keyboard_arrow_left"></span></a>
-            <a href="#" class="custom-next"><span class="icon-keyboard_arrow_right"></span></a>
+          <div class="f-carousel" id="carousel">
+            <img src="images/Ablauf_Reparatur.png" alt="Ablauf Reparatur" class="f-carousel__slide img-fluid">
+            <img src="images/Ueberblick_Varianten.PNG" alt="Überblick Varianten" class="f-carousel__slide img-fluid">
+            <img src="images/Ueberblick_Service.PNG" alt="Überblick Service" class="f-carousel__slide img-fluid">
           </div>
         </div>
       </div>
@@ -309,8 +306,7 @@
         </div>
         <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
           <div class="image-absolute-box">
-
-            <img src="static/images/Ablauf_Reparatur.png" alt="Image" class="img-fluid">
+            <img src="images/Ablauf_Reparatur.png" alt="Ablauf Reparatur" class="img-fluid">
           </div>
         </div>
       </div>
@@ -329,63 +325,63 @@
         </div>
       </div>
     </div>
-    <div class="owl-carousel work-carousel">
-      <a class="work-thumb" href="static/images/Jailbreak.JPG" data-fancybox="gallery">
+    <div class="f-carousel" id="work-carousel">
+      <div class="f-carousel__slide work-thumb" data-src="images/Jailbreak.JPG" data-fancybox="gallery" data-caption="Vario-Vent Jailbreak: Set zum Umprogrammieren von X-Serien-Lüfter">
         <div class="work-text">
           <h3>Vario-Vent Jailbreak</h3>
           <span class="category">Set zum Umprogrammieren von X-Serien-Lüfter</span>
         </div>
-        <img src="static/images/Jailbreak.JPG" alt="Image" class="img-fluid">
-      </a>
-      <a class="work-thumb" href="static/images/XSerie_Ersatzplatine.JPG" data-fancybox="gallery">
+        <img src="images/Jailbreak.JPG" alt="Jailbreak">
+      </div>
+      <div class="f-carousel__slide work-thumb" data-src="images/XSerie_Ersatzplatine.JPG" data-fancybox="gallery" data-caption="Vario-Vent Ersatzteile: Sensor-Ersatzplatine für X-Serie-Lüfter">
         <div class="work-text">
           <h3>Vario-Vent Ersatzteile</h3>
           <span class="category">Sensor-Ersatzplatine für X-Serie-Lüfter</span>
         </div>
-        <img src="static/images/XSerie_Ersatzplatine.JPG" alt="Image" class="img-fluid">
-      </a>
-      <a class="work-thumb" href="static/images/DuoLive_Ersatzplatine.JPG" data-fancybox="gallery">
+        <img src="images/XSerie_Ersatzplatine.JPG" alt="XSerie Ersatzplatine">
+      </div>
+      <div class="f-carousel__slide work-thumb" data-src="images/DuoLive_Ersatzplatine.JPG" data-fancybox="gallery" data-caption="Vario-Vent Ersatzteile: Sensor-Ersatzplatine für DuoLive-Lüfter">
         <div class="work-text">
           <h3>Vario-Vent Ersatzteile</h3>
           <span class="category">Sensor-Ersatzplatine für DuoLive-Lüfter</span>
         </div>
-        <img src="static/images/DuoLive_Ersatzplatine.JPG" alt="Image" class="img-fluid">
-      </a>
-      <a class="work-thumb" href="static/images/MonoSmart.jpg" data-fancybox="gallery">
+        <img src="images/DuoLive_Ersatzplatine.JPG" alt="DuoLive Ersatzplatine">
+      </div>
+      <div class="f-carousel__slide work-thumb" data-src="images/MonoSmart.jpg" data-fancybox="gallery" data-caption="Vario-Vent Ersatzteile: Sensor-Ersatzplatine für MonoSmart-Lüfter">
         <div class="work-text">
           <h3>Vario-Vent Ersatzteile</h3>
           <span class="category">Sensor-Ersatzplatine für MonoSmart-Lüfter</span>
         </div>
-        <img src="static/images/MonoSmart.jpg" alt="Image" class="img-fluid">
-      </a>
-      <a class="work-thumb" href="static/images/3D_Stuff.PNG" data-fancybox="gallery">
+        <img src="images/MonoSmart.jpg" alt="MonoSmart">
+      </div>
+      <div class="f-carousel__slide work-thumb" data-src="images/3D_Stuff.PNG" data-fancybox="gallery" data-caption="3D-Druck: Modernste Technik für deinen Spot">
         <div class="work-text">
           <h3>3D-Druck</h3>
           <span class="category">Modernste Technik für deinen Spot</span>
         </div>
-        <img src="static/images/3D_Stuff.PNG" alt="Image" class="img-fluid">
-      </a>
-      <a class="work-thumb" href="static/images/Ersatzteil_Keramikblock.jpg" data-fancybox="gallery">
+        <img src="images/3D_Stuff.PNG" alt="3D Druck">
+      </div>
+      <div class="f-carousel__slide work-thumb" data-src="images/Ersatzteil_Keramikblock.jpg" data-fancybox="gallery" data-caption="Vario-Vent Keramikwärmetauscher und schon steigt die Effizienz!">
         <div class="work-text">
           <h3>Vario-Vent Keramikwärmetauscher</h3>
           <span class="category">... und schon steigt die Effizienz!</span>
         </div>
-        <img src="static/images/Ersatzteil_Keramikblock.jpg" alt="Image" class="img-fluid">
-      </a>
-      <a class="work-thumb" href="static/images/Ersatzluefter_XSerie.jpg" data-fancybox="gallery">
+        <img src="images/Ersatzteil_Keramikblock.jpg" alt="Ersatzteil Keramikblock">
+      </div>
+      <div class="f-carousel__slide work-thumb" data-src="images/Ersatzluefter_XSerie.jpg" data-fancybox="gallery" data-caption="Ersatzlüfter für X-Serien-Geräte">
         <div class="work-text">
           <h3>Ersatzlüfter für X-Serien-Geräte</h3>
           <span class="category">... damit sich's wieder dreht!</span>
         </div>
-        <img src="static/images/Ersatzluefter_XSerie.jpg" alt="Image" class="img-fluid">
-      </a>
-      <a class="work-thumb" href="static/images/Display_Reparatur.jpg" data-fancybox="gallery">
+        <img src="images/Ersatzluefter_XSerie.jpg" alt="Ersatzlüfter XSerie">
+      </div>
+      <div class="f-carousel__slide work-thumb" data-src="images/Display_Reparatur.jpg" data-fancybox="gallery" data-caption="Display-Reparatur bei Duo-Variante: Austausch der Anzeige bei einer DUO-Steuereinheit">
         <div class="work-text">
           <h3>Display-Reparatur bei Duo-Variante</h3>
           <span class="category">Austausch der Anzeige bei einer DUO-Steuereinheit</span>
         </div>
-        <img src="static/images/Display_Reparatur.jpg" alt="Image" class="img-fluid">
-      </a>
+        <img src="images/Display_Reparatur.jpg" alt="Display Reparatur">
+      </div>
     </div>
   </div>
 
@@ -400,6 +396,7 @@
         </div>
       </div>
     </div>
+
     <div class="services">
 
       <div class="service">
@@ -570,7 +567,7 @@
     <div class="services">
       <div class="service">
         <h3><strong>Kirschner Heizungsbau</strong></h3>
-        <img src="static/images/kirschner.gif" alt="Kirschner" class="img-fluid">
+        <img src="images/kirschner.gif" alt="Kirschner" class="img-fluid">
         <ul>
           <li>94562 Oberpöring, Bayern</li>
           <li>Heizungsbau, Klima, Sanitär</li>
@@ -584,7 +581,7 @@
     <div class="container">
       <div class="row align-items-start justify-content-md-center form-container">
         <div class="col-md-6 order-1 order-md-2 mb-5 mb-md-0 mt-md-5">
-          <img src="static/images/Ueberblick_Service.PNG" alt="Image" class="img-fluid">
+          <img src="images/Ueberblick_Service.PNG" alt="Überblick Service" class="img-fluid">
         </div>
         <div class="col-md-6 mr-auto order-2 order-md-1">
           <h2 class="section-title mb-3">Kontaktieren Sie uns ...</h2>
@@ -847,7 +844,7 @@
       </div>
     </div>
     <div class="services">
-      <a href="static/downloads/Anleitung_Ausbau_Platinen_DuoLive.pdf" class="btn btn-primary" target="_blank"
+      <a href="downloads/Anleitung_Ausbau_Platinen_DuoLive.pdf" class="btn btn-primary" target="_blank"
          role="button">
         <h5 class="m-2">Ausbauanleitung DuoLive-Sensor</h5>
       </a>
@@ -855,7 +852,7 @@
     <br>
     <br>
     <div class="services">
-      <a href="static/downloads/Anleitung_XSerie_Sensorplatine_Bausatz.pdf" class="btn btn-primary" target="_blank"
+      <a href="downloads/Anleitung_XSerie_Sensorplatine_Bausatz.pdf" class="btn btn-primary" target="_blank"
          role="button">
         <h5 class="m-2">Bauanleitung für X-Serien-Sensorplatine (DIY-Kit)</h5>
       </a>
@@ -863,7 +860,7 @@
     <br>
     <br>
     <div class="services">
-      <a href="static/downloads/Anleitung_XSerie_Jailbreak.pdf" class="btn btn-primary" target="_blank"
+      <a href="downloads/Anleitung_XSerie_Jailbreak.pdf" class="btn btn-primary" target="_blank"
          role="button">
         <h5 class="m-2">Anleitung für X-Serien-Jailbreak</h5>
       </a>
@@ -893,7 +890,7 @@
           <div class="service">
             <iframe width="100%"
                     height="100%"
-                    src="https://www.youtube.com/embed/WnJyLzzX9tQ"
+                    src="https://www.youtube-nocookie.com/embed/WnJyLzzX9tQ"
                     title="YouTube video player"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

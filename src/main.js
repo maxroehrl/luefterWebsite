@@ -1,29 +1,23 @@
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-import $ from 'jquery';
-
 import 'jquery.easing';
 
 import 'jquery-sticky';
 
-import { Fancybox } from '@fancyapps/ui';
+import {Fancybox, Carousel} from '@fancyapps/ui';
+import {de} from '@fancyapps/ui/dist/fancybox/l10n/de.esm';
 import '@fancyapps/ui/dist/fancybox/fancybox.css';
-import { de } from '@fancyapps/ui/dist/fancybox/l10n/de.esm';
-
-Fancybox.bind('[data-fancybox]', { l10n: de });
-
-import 'owl.carousel/dist/assets/owl.carousel.css';
-import 'owl.carousel/dist/assets/owl.theme.default.css';
+import "@fancyapps/ui/dist/carousel/carousel.css";
+import {Autoplay} from "@fancyapps/ui/dist/carousel/carousel.autoplay.esm";
+import {de as de2} from '@fancyapps/ui/dist/carousel/l10n/de.esm';
+import "@fancyapps/ui/dist/carousel/carousel.autoplay.css";
 
 import 'bootstrap';
 
 import './style.scss';
 
-window.jQuery = $;
-
-const owl_carousel = require('owl.carousel');
-window.fn = owl_carousel;
+Fancybox.bind('[data-fancybox]', {l10n: de});
 
 // Initialize the AOS scrolling
 AOS.init({
@@ -80,54 +74,32 @@ $(document).ready(function ($) {
     }
   });
 
-  // Setup Owl carousels
-  $('.work-carousel').owlCarousel({
-    items: 1,
-    loop: true,
-    autoplay: true,
-    smartSpeed: 800,
-    nav: true,
-    responsive: {
-      600: {
-        items: 2
-      },
-      1000: {
-        items: 3
-      },
-    }
-  });
-  const $carouselText = $('.carousel-text');
-  const option = {
-    items: 1,
-    loop: true,
-    dots: false,
-    smartSpeed: 1000,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    pauseOnHover: true,
-    onDragged(event) {
-      if (event.relatedTarget['_drag']['direction'] === 'left') {
-        $carouselText.trigger('next.owl.carousel');
-      } else {
-        $carouselText.trigger('prev.owl.carousel');
-      }
-    }
-  };
-  const $carousel = $('.carousel');
-  $carousel.owlCarousel(option);
-  $carouselText.owlCarousel(option);
-  $('.custom-next').click(function (e) {
-    e.preventDefault();
-    $carousel.trigger('next.owl.carousel');
-    $carouselText.trigger('next.owl.carousel');
-  });
-  $('.custom-prev').click(function (e) {
-    e.preventDefault();
-    $carousel.trigger('prev.owl.carousel');
-    $carouselText.trigger('prev.owl.carousel');
-  });
+  // Setup carousels
+  new Carousel(document.getElementById('work-carousel'), {
+    l10n: de2,
+    transition: 'slide',
+  }, {Autoplay});
+  const carousel = new Carousel(document.getElementById('carousel'),
+    {
+      l10n: de2,
+      infinite: true,
+      slidesPerPage: 1,
+      transition: 'slide',
+      Autoplay: {timeout: 10000},
+      Dots: false,
+    }, {Autoplay});
+  new Carousel(document.getElementById('carousel-text'),
+    {
+      l10n: de2,
+      infinite: true,
+      slidesPerPage: 1,
+      transition: 'slide',
+      Dots: false,
+      Navigation: false,
+      Sync: {target: carousel}
+    });
 
-  // Smooth scrolling to anchor id when link is clicked
+  // Smooth scrolling to anchor id when link is clicked (uses jquery.easing)
   $body.on('click', ".footer-links[href^='#'], a.btn[href^='#'], .nav-link[href^='#'], .site-mobile-menu .site-nav-wrap li a", function (e) {
     e.preventDefault();
     const hash = this.hash;
