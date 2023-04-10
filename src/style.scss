@@ -175,27 +175,21 @@ h1, h2, h3, h4, h5,
     height: 80px;
   }
 
-  .site-navigation {
-    .site-menu {
-      margin-bottom: 0;
+  .site-navigation .site-menu {
+    margin-bottom: 0;
 
-      li {
-        display: inline-block;
+    > li > .nav-link {
+      transition: 0.3s ease all;
+      padding: 5px;
+      color: #fff;
+      display: inline-block;
 
-        .nav-link {
-          transition: 0.3s ease all;
-          padding: 5px;
-          color: #fff;
-          display: inline-block;
-
-          &.active {
-            padding: 5px 20px;
-          }
-        }
+      &.active {
+        padding: 5px 20px;
       }
     }
 
-    .site-menu.site-menu-dark > li > a {
+    &.site-menu-dark > li > .nav-link {
       color: black;
       position: relative;
 
@@ -443,10 +437,9 @@ h1, h2, h3, h4, h5,
 
 .intro-section {
   position: relative;
-  height: 100vh;
 
-  .container.row {
-    height: 100vh;
+  .container > div {
+    min-height: 90vh;
   }
 
   &:before {
@@ -836,6 +829,7 @@ h1, h2, h3, h4, h5,
   .sticky-wrapper .site-menu-toggle {
     color: #fff;
   }
+
   .intro-section {
     $intro-radius: 20vw;
 
@@ -847,9 +841,12 @@ h1, h2, h3, h4, h5,
       border-bottom-right-radius: $intro-radius;
     }
 
-    .f-carousel__viewport {
-      border-bottom-left-radius: $intro-radius;
-      border-top-right-radius: $intro-radius;
+    #carousel .f-carousel__viewport {
+      border-radius: $intro-radius;
+    }
+
+    .container > div {
+      align-items: start !important;
     }
 
     &:before {
@@ -858,6 +855,11 @@ h1, h2, h3, h4, h5,
 
     p {
       min-width: 100%;
+      font-size: 1rem;
+    }
+
+    h1 {
+      font-size: 1.5rem;
     }
   }
 
@@ -867,10 +869,6 @@ h1, h2, h3, h4, h5,
     position: relative;
     width: 100%;
     max-width: 100%;
-  }
-
-  #carousel-text {
-    text-align: center;
   }
 
   #faq-section .services .service {

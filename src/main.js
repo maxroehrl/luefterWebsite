@@ -88,7 +88,7 @@ $(document).ready(function ($) {
     });
 
   // Smooth scrolling to anchor id when link is clicked
-  $body.on('click', ".footer-links[href^='#'], a.btn[href^='#'], .site-mobile-menu .site-nav-wrap li a", function (e) {
+  $body.on('click', ".footer-links[href^='#'], a.btn[href^='#'], .site-mobile-menu .site-nav-wrap .nav-link[href^='#']", function (e) {
     e.preventDefault();
     if ($body.hasClass('offcanvas-menu')) {
       $body.removeClass('offcanvas-menu');
@@ -108,9 +108,10 @@ $(document).ready(function ($) {
   function updateCaptcha() {
     const a = Math.floor(Math.random() * 20) + 1;
     const b = Math.floor(Math.random() * 20) + 1;
-    $('#question').text(`Was ist das Ergebnis von ${a} plus ${b} als Zahl:`);
+    $('#question').text(`Das Ergebnis von ${a} plus ${b}:`);
     answer = a + b + '';
   }
+
   updateCaptcha();
 
   // Fade out form after submit
