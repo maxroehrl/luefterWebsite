@@ -1,11 +1,6 @@
-import AOS from 'aos';
-import 'aos/dist/aos.css';
-
-import 'jquery.easing';
-
 import 'jquery-sticky';
 
-import {Fancybox, Carousel} from '@fancyapps/ui';
+import {Carousel, Fancybox} from '@fancyapps/ui';
 import {de} from '@fancyapps/ui/dist/fancybox/l10n/de.esm';
 import '@fancyapps/ui/dist/fancybox/fancybox.css';
 import "@fancyapps/ui/dist/carousel/carousel.css";
@@ -18,21 +13,6 @@ import 'bootstrap';
 import './style.scss';
 
 Fancybox.bind('[data-fancybox]', {l10n: de});
-
-if (window.mozInnerScreenX == null) {
-// Initialize the AOS scrolling
-  AOS.init({
-    startEvent: 'load',
-    duration: 800,
-    easing: 'slide',
-    once: true,
-  });
-} else {
-  // Disable scroll effects for Firefox
-  AOS.init({
-    disable: true,
-  });
-}
 
 let answer;
 
@@ -107,21 +87,13 @@ $(document).ready(function ($) {
       Sync: {target: carousel}
     });
 
-  // Smooth scrolling to anchor id when link is clicked (uses jquery.easing)
-  $body.on('click', ".footer-links[href^='#'], a.btn[href^='#'], .nav-link[href^='#'], .site-mobile-menu .site-nav-wrap li a", function (e) {
+  // Smooth scrolling to anchor id when link is clicked
+  $body.on('click', ".footer-links[href^='#'], a.btn[href^='#'], .site-mobile-menu .site-nav-wrap li a", function (e) {
     e.preventDefault();
-    const hash = this.hash;
-    const offset = $(hash).offset();
     if ($body.hasClass('offcanvas-menu')) {
       $body.removeClass('offcanvas-menu');
     }
-    if (offset) {
-      $('html, body').animate({
-        'scrollTop': offset.top
-      }, 800, 'easeInOutCirc', function () {
-        window.location.hash = hash;
-      });
-    }
+    document.getElementById(this.hash.slice(1))?.scrollIntoView({block: 'start', behavior: 'smooth'});
   });
 
   // Change the navigation bar appearance on scroll

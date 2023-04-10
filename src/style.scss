@@ -40,19 +40,35 @@ $theme-colors: (
   content: "\f16a";
 }
 
+.rate_review:before {
+  font-family: "icomoon" !important;
+  content: "\e560";
+}
+
+.pdf:before {
+  font-family: "icomoon" !important;
+  content: "\f1c1";
+}
+
 body {
   line-height: 1.7;
-  color: gray;
+  color: var(--bs-gray-700);
   font-weight: 300;
   font-size: 1.1rem;
 }
 
 a {
   transition: 0.3s all ease;
+  text-decoration: none;
+  color: $highlight2;
 
   &:hover {
     text-decoration: none;
   }
+}
+
+.text-justify {
+  text-align: justify;
 }
 
 h1, h2, h3, h4, h5,
@@ -69,14 +85,8 @@ h1, h2, h3, h4, h5,
   z-index: 2000;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
   opacity: 0;
   visibility: hidden;
-}
-
-.site-section {
-  padding: 2.5em 0;
 }
 
 .offcanvas-menu {
@@ -109,62 +119,20 @@ h1, h2, h3, h4, h5,
   }
 }
 
-.btn {
-  text-transform: uppercase;
-  font-size: 12px;
-  font-weight: 900;
+.ul-check li {
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 15px;
+  line-height: 1.5;
 
-  &:hover, &:focus, &:focus {
-    outline: none;
-    box-shadow: none !important;
-  }
-}
-
-.form-control {
-  height: 55px;
-  border-width: 2px;
-  font-family: "Muli", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-
-  &:active, &:focus {
-    border-color: $highlight;
-
-  }
-
-  &:hover, &:focus, &:active {
-    box-shadow: none !important;
-  }
-}
-
-.ul-check {
-  margin-bottom: 50px;
-
-  li {
-    position: relative;
-    padding-left: 35px;
-    margin-bottom: 15px;
-    line-height: 1.5;
-    text-align: left;
-
-    &:before {
-      left: 0;
-      font-size: 20px;
-      top: -0.3rem;
-      font-family: "icomoon" !important;
-      content: "\e5ca";
-      position: absolute;
-    }
-  }
-
-  &.success li:before {
+  &:before {
+    left: 0;
+    font-size: 20px;
+    top: -0.3rem;
+    font-family: "icomoon" !important;
+    content: "\e5ca";
+    position: absolute;
     color: $successColor;
-  }
-
-  &.primary li:before {
-    color: $highlight;
-  }
-
-  &.white li:before {
-    color: #fff;
   }
 }
 
@@ -211,56 +179,46 @@ h1, h2, h3, h4, h5,
     .site-menu {
       margin-bottom: 0;
 
-      .active {
-        color: $highlight;
-        display: inline-block;
-        padding: 5px 20px;
-      }
-
       li {
         display: inline-block;
 
-        a {
-          text-decoration: none !important;
+        .nav-link {
+          transition: 0.3s ease all;
           padding: 5px;
           color: #fff;
           display: inline-block;
 
-          &:hover {
-            color: #fff;
+          &.active {
+            padding: 5px 20px;
           }
         }
       }
     }
 
-    .site-menu.site-menu-dark {
-      > li {
-        > a {
-          color: black;
-          position: relative;
+    .site-menu.site-menu-dark > li > a {
+      color: black;
+      position: relative;
 
-          &:after {
-            height: 2px;
-            background: black;
-          }
+      &:after {
+        height: 2px;
+        background: black;
+      }
 
-          &:hover {
-            color: black;
-            position: relative;
+      &:hover {
+        color: black;
+        position: relative;
 
-            &:after {
-              transform: scale(1);
-            }
-          }
+        &:after {
+          transform: scale(1);
         }
+      }
 
-        > a.active {
-          color: $highlight;
-          position: relative;
+      &.active {
+        color: $highlight;
+        position: relative;
 
-          &:after {
-            transform: scale(1);
-          }
+        &:after {
+          transform: scale(1);
         }
       }
     }
@@ -487,10 +445,8 @@ h1, h2, h3, h4, h5,
   position: relative;
   height: 100vh;
 
-  .container {
-    .row {
-      height: 100vh;
-    }
+  .container.row {
+    height: 100vh;
   }
 
   &:before {
@@ -513,69 +469,17 @@ h1, h2, h3, h4, h5,
     font-size: 1.8rem;
     max-width: 400px;
   }
-
-  .btn {
-    border-width: 2px;
-  }
 }
 
 .bg-light {
   background: #f1f3f8 !important;
 }
 
-.section-sub-title {
-  color: $highlight;
-  text-transform: uppercase;
-  font-size: 0.7rem;
-  font-weight: 900;
-  display: block;
-  margin-bottom: 1.5rem;
-}
-
 .section-title {
   font-size: 3rem;
   color: $highlight;
-  margin-bottom: 1.8rem;
+  margin: 2rem 2rem;
   font-weight: 900;
-}
-
-.image-absolute-box {
-  position: relative;
-
-  .box {
-    position: absolute;
-    background: $highlight;
-    padding: 30px;
-    max-width: 300px;
-    bottom: -10%;
-    right: -10%;
-
-    h3 {
-      font-size: 1.2rem;
-      color: #fff;
-      margin-bottom: 1.5rem;
-    }
-
-    p {
-      color: rgba(255, 255, 255, 0.8);
-    }
-  }
-}
-
-.section-1 {
-  margin-top: 10rem;
-}
-
-#work-carousel {
-  .f-carousel__nav button {
-    background: $highlight2;
-    color: white;
-    border-radius: 50%;
-  }
-
-  .f-carousel__dots .is-current button {
-    color: $highlight2;
-  }
 }
 
 .work-thumb {
@@ -584,10 +488,6 @@ h1, h2, h3, h4, h5,
   height: 300px;
   width: 400px;
   transition: 0.2s all ease-in-out;
-
-  @media (min-width: 768px) {
-    width: calc(100% / 3);
-  }
 
   img {
     object-fit: cover;
@@ -654,7 +554,28 @@ h1, h2, h3, h4, h5,
   }
 }
 
+#contact-section {
+  .form-control:focus, .form-select:focus {
+    border-color: $highlight2;
+    box-shadow: 0 0 0 0.25rem $highlightTransparent2;
+  }
+}
+
 #work-carousel {
+  .f-progress {
+    background: $highlight2 !important;
+  }
+
+  .f-carousel__nav button {
+    background: $highlight2;
+    color: white;
+    border-radius: 50%;
+  }
+
+  .f-carousel__dots .is-current button {
+    color: $highlight2;
+  }
+
   .f-carousel__slide {
     position: relative;
     z-index: 2;
@@ -669,8 +590,6 @@ h1, h2, h3, h4, h5,
 }
 
 .footer-section {
-  padding: 7em 0;
-
   p {
     font-size: 1rem;
   }
@@ -683,16 +602,14 @@ h1, h2, h3, h4, h5,
     font-weight: 900;
   }
 
-  .footer-links {
-    li {
-      margin-bottom: 10px;
+  .footer-links li {
+    margin-bottom: 10px;
 
-      a {
-        color: white;
+    a {
+      color: white;
 
-        &:hover {
-          color: $highlight2;
-        }
+      &:hover {
+        color: $highlight2;
       }
     }
   }
@@ -724,10 +641,12 @@ h1, h2, h3, h4, h5,
       &:after, &:before {
         text-align: center;
       }
-    }
 
-    .content {
-      transition: 1s border ease-in-out;
+      &:before {
+        padding-right: 1rem;
+        font-family: "icomoon" !important;
+        content: "\e8af";
+      }
     }
   }
 }
@@ -776,6 +695,7 @@ h1, h2, h3, h4, h5,
     .content {
       padding: 1rem;
       display: none;
+      transition: 1s border ease-in-out;
 
       ul {
         padding: 10px;
@@ -882,65 +802,6 @@ h1, h2, h3, h4, h5,
   }
 }
 
-.pricing-wrap {
-  padding-bottom: 20rem;
-  padding-top: 7rem;
-}
-
-.pricing {
-  margin-top: -70%;
-  background: #fff;
-  padding: 30px;
-  box-shadow: 0 5px 30px -5px rgba(0, 0, 0, 0.2);
-  border-radius: 7px;
-  text-align: center;
-  z-index: 1;
-  position: relative;
-
-  em {
-    font-style: normal;
-  }
-
-  h3 {
-    color: $highlight;
-    font-weight: 300;
-    margin-bottom: 1.5rem;
-  }
-
-  .description, .description-2 {
-    font-size: 15px;
-  }
-
-  .btn {
-    border-width: 2px;
-  }
-
-  &.pricing-popular {
-    transform: scale(1.05);
-    z-index: 2;
-  }
-
-  .price {
-    margin: 30px 0;
-
-    span {
-      display: block;
-      font-weight: 700;
-      font-size: 13px;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: $highlight;
-    }
-
-    strong {
-      font-weight: 300;
-      font-family: "Oswald", sans-serif;
-      color: $highlight;
-      font-size: 4rem;
-    }
-  }
-}
-
 #legal, #agb, #data-security {
   max-width: 768px;
 }
@@ -965,53 +826,7 @@ h1, h2, h3, h4, h5,
   transform: translate(-50%, -50%);
 }
 
-@media (min-width: 768px) {
-  .site-section {
-    padding: 5em 0;
-  }
-  .site-section-heading {
-    font-size: 3rem;
-  }
-  .site-footer {
-    padding: 8em 0;
-  }
-}
-
-@media (max-width: 992px) {
-  .hover-bg-enlarge {
-    height: auto !important;
-
-    .bg-image-md-height {
-      height: 300px !important;
-    }
-  }
-  .img-md-fluid {
-    max-width: 100%;
-  }
-  .display-1 {
-    font-size: 3rem;
-  }
-  .display-3 {
-    font-size: 3rem;
-  }
-}
-
 @media (max-width: 1199.98px) {
-  .pricing-wrap {
-    padding-bottom: 7em;
-  }
-  .pricing {
-    margin-top: 0;
-    margin-bottom: 7rem;
-
-    &:first-child {
-      margin-top: -70px;
-    }
-
-    &.pricing-popular {
-      transform: scale(1);
-    }
-  }
   .form-container > div {
     min-width: 100%;
   }
@@ -1036,6 +851,7 @@ h1, h2, h3, h4, h5,
       border-bottom-left-radius: $intro-radius;
       border-top-right-radius: $intro-radius;
     }
+
     &:before {
       width: 100%;
     }
@@ -1044,12 +860,7 @@ h1, h2, h3, h4, h5,
       min-width: 100%;
     }
   }
-  .site-section {
-    padding: 4em 0;
-  }
-  .section-title {
-    font-size: 2.5rem;
-  }
+
   .image-absolute-box .box {
     top: auto;
     right: auto;
@@ -1061,6 +872,7 @@ h1, h2, h3, h4, h5,
   #carousel-text {
     text-align: center;
   }
+
   #faq-section .services .service {
     &.active {
       height: 650px;

@@ -9,7 +9,8 @@
   <meta name="geo.region" content="DE-BY">
   <meta property="og:type" content="website">
   <meta name="geo.placename" content="Oberpöring">
-  <meta name="keywords" content="VarioVent, Vario Vent, Vario-Vent, X-Serie, DuoLive, Vario-Vent-Reparatur, VarioVent-Reparatur, Vario Vent-Reparatur"/>
+  <meta name="keywords"
+        content="VarioVent, Vario Vent, Vario-Vent, X-Serie, DuoLive, Vario-Vent-Reparatur, VarioVent-Reparatur, Vario Vent-Reparatur"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <meta name="application-name" content="Vario Vent Ersatzteile / Vario Vent Reparatur"/>
   <meta name="description"
@@ -27,15 +28,15 @@
   </script>
 </head>
 
-<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+<body data-bs-spy="scroll" data-bs-target="#site-navbar-target" data-bs-offset="300" data-bs-smooth-scroll="true">
 <div id="overlayer"></div>
 <div class="loader">
   <div class="spinner-border text-primary" role="status">
-    <span class="sr-only">Nur die Ruhe ihr Vario-Vent-System läuft bald wieder...</span>
+    <span class="visually-hidden">Nur die Ruhe ihr Vario-Vent-System läuft bald wieder...</span>
   </div>
 </div>
 <div class="site-wrap" style="visibility: hidden">
-  <div class="site-mobile-menu site-navbar-target">
+  <div class="site-mobile-menu">
     <div class="site-mobile-menu-header">
       <div class="site-mobile-menu-close mt-3">
         <span class="js-menu-toggle"></span>
@@ -43,7 +44,8 @@
     </div>
     <div class="site-mobile-menu-body"></div>
   </div>
-  <header class="site-navbar py-4 js-sticky-header site-navbar-target" role="banner">
+
+  <header class="site-navbar py-4 js-sticky-header" role="banner" id="site-navbar-target">
     <div class="container-fluid">
       <div class="d-flex align-items-center">
         <div class="logo-image">
@@ -188,9 +190,10 @@
             </g>
           </svg>
         </div>
+
         <div>
-          <nav class="site-navigation position-relative text-right" role="navigation">
-            <ul class="site-menu main-menu js-clone-nav mr-auto d-none d-xl-block">
+          <nav class="site-navigation position-relative" role="navigation">
+            <ul class="site-menu js-clone-nav me-auto d-none d-xl-block">
               <li><a href="#home-section" class="nav-link">Willkommen</a></li>
               <li><a href="#photos" class="nav-link">Galerie</a></li>
               <li><a href="#services-section" class="nav-link">Dienstleistungen</a></li>
@@ -201,32 +204,23 @@
             </ul>
           </nav>
         </div>
-        <div class="ml-auto flex-row d-flex">
-          <nav class="site-navigation position-relative text-right" role="navigation">
-            <ul class="site-menu main-menu site-menu-dark js-clone-nav d-none d-xl-block">
+
+        <div class="ms-auto flex-row d-flex">
+          <nav class="site-navigation position-relative" role="navigation">
+            <ul class="site-menu site-menu-dark js-clone-nav d-none d-xl-block">
               <li class="cta">
                 <a href="https://www.ebay.de/usr/chrikirs-1247" class="nav-link" target="_blank">
-                  <span class="cart border bg-danger rounded text-white border-danger">&nbsp;eBay Shop</span>
+                  <span class="cart border bg-danger rounded text-white border-danger">&nbsp;eBay</span>
                 </a>
               </li>
-            </ul>
-          </nav>
-
-          <nav class="site-navigation position-relative text-right" role="navigation">
-            <ul class="site-menu main-menu site-menu-dark js-clone-nav d-none d-xl-block">
               <li class="cta">
                 <a href="https://www.youtube.com/@krspot-repair2614" class="nav-link" target="_blank">
                   <span class="youtube border bg-danger rounded text-white border-danger">&nbsp;YouTube</span>
                 </a>
               </li>
-            </ul>
-          </nav>
-
-          <nav class="site-navigation position-relative text-right" role="navigation">
-            <ul class="site-menu main-menu site-menu-dark js-clone-nav d-none d-xl-block">
               <li class="cta">
                 <a href="https://g.page/r/CeXo7AZ2d9heEBM/review" class="nav-link" target="_blank">
-                  <span class="google border bg-danger rounded text-white border-danger">&nbsp;Bewerten</span>
+                  <span class="rate_review border bg-danger rounded text-white border-danger">&nbsp;Bewerten</span>
                 </a>
               </li>
             </ul>
@@ -239,10 +233,11 @@
       </div>
     </div>
   </header>
+
   <div class="intro-section" id="home-section">
     <div class="container">
-      <div class="row align-items-center">
-        <div class="col-lg-5 mr-auto" data-aos="fade-up">
+      <div class="row align-items-center min-vh-100">
+        <div class="col-lg-5 me-auto">
           <div class="f-carousel" id="carousel-text">
             <div class="f-carousel__slide">
               <h1>Sie sind auf der Suche ...</h1>
@@ -264,66 +259,52 @@
             </div>
           </div>
         </div>
-        <div class="col-lg-6 ml-auto" data-aos="fade-up" data-aos-delay="100">
-          <div class="f-carousel" id="carousel">
-            <img src="images/Ablauf_Reparatur.png" alt="Ablauf Reparatur" class="f-carousel__slide img-fluid">
-            <img src="images/Ueberblick_Varianten.PNG" alt="Überblick Varianten" class="f-carousel__slide img-fluid">
-            <img src="images/Ueberblick_Service.PNG" alt="Überblick Service" class="f-carousel__slide img-fluid">
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="site-section section-1">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-5 mr-auto mb-5" data-aos="fade-up">
-          <div class="mb-5 text-justify">
-            <h2 class="section-title"> Seit 2019...</h2>
-            <p>
-              ... ist die Firma "Vario-Vent Lüftungssysteme GmbH" insolvent.
-            </p>
-            <p>
-              Grundlegend war die Idee des Unternehmens klasse:
-              Einfach zu montierende Lüfter, die ganz ohne aufwendige Verkabelung auskommen.
-              Das Ganze als smarte Lösung im schlichten Design arrangiert.
-              <br><br>
-              Viele der von dieser Firma entwickelten Anlagen geben leider nun jedoch nach und nach den Geist auf.
-              Meist sind die eigentlichen Lüftungsanlagen sogar technisch in gutem Zustand und könnten noch Jahre
-              weiterlaufen.
-              Das Problem liegt hierbei oft beim Steuerorgan des Systems, dem sogenannten Spot.
-              Wegen der Insolvenz des Unternehmens bietet dieses jedoch keinerlei Reparatur-Service für die Anlagen mehr
-              an.
-            </p>
-            <strong>
-              Und hier kommen wir ins Spiel...
-            </strong>
-            <p>
-              <br>
-              <strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;...wir bringen Ihre Anlage wieder zum
-                Lüften!</strong>
-              <br><br>
-            </p>
-            <ul class="ul-check list-unstyled success">
-              <li>Spot-Wiederbelebung</li>
-              <li>Sensor-Reparatur / -Austausch</li>
-              <li>Adapter für Wandmontage</li>
-              <li>Austausch der Steuerung</li>
-              <li>Ersatzteile</li>
-              <li>WLAN-Fix</li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
-          <div class="image-absolute-box">
-            <img src="images/Ablauf_Reparatur.png" alt="Ablauf Reparatur" class="img-fluid">
-          </div>
+
+        <div class="f-carousel col-lg-6 ms-auto" id="carousel">
+          <img src="images/Ablauf_Reparatur.png" alt="Ablauf Reparatur" class="f-carousel__slide img-fluid">
+          <img src="images/Ueberblick_Varianten.PNG" alt="Überblick Varianten" class="f-carousel__slide img-fluid">
+          <img src="images/Ueberblick_Service.PNG" alt="Überblick Service" class="f-carousel__slide img-fluid">
         </div>
       </div>
     </div>
   </div>
 
-  <div class="site-section section-2" id="photos" data-aos="fade">
+  <div class="container col-lg-5 me-auto text-justify my-4">
+    <h2 class="section-title"> Seit 2019...</h2>
+    <p>
+      ... ist die Firma "Vario-Vent Lüftungssysteme GmbH" insolvent.
+    </p>
+    <p>
+      Grundlegend war die Idee des Unternehmens klasse:
+      Einfach zu montierende Lüfter, die ganz ohne aufwendige Verkabelung auskommen.
+      Das Ganze als smarte Lösung im schlichten Design arrangiert.
+      <br><br>
+      Viele der von dieser Firma entwickelten Anlagen geben leider nun jedoch nach und nach den Geist auf.
+      Meist sind die eigentlichen Lüftungsanlagen sogar technisch in gutem Zustand und könnten noch Jahre
+      weiterlaufen.
+      Das Problem liegt hierbei oft beim Steuerorgan des Systems, dem sogenannten Spot.
+      Wegen der Insolvenz des Unternehmens bietet dieses jedoch keinerlei Reparatur-Service für die Anlagen mehr
+      an.
+    </p>
+    <strong>
+      Und hier kommen wir ins Spiel...
+    </strong>
+    <p class="text-end">
+      <br>
+      <strong>...wir bringen Ihre Anlage wieder zum Lüften!</strong>
+      <br><br>
+    </p>
+    <ul class="ul-check list-unstyled">
+      <li>Spot-Wiederbelebung</li>
+      <li>Sensor-Reparatur &amp; -Austausch</li>
+      <li>Adapter für Wandmontage</li>
+      <li>Austausch der Steuerung</li>
+      <li>Ersatzteile</li>
+      <li>WLAN-Fix</li>
+    </ul>
+  </div>
+
+  <div class="my-5" id="photos">
     <div class="container">
       <div class="row">
         <div class="col-lg-6 mb-5 text-justify">
@@ -403,7 +384,7 @@
     </div>
   </div>
 
-  <div class="site-section bg-light" id="services-section" data-aos="fade">
+  <div class="bg-light" id="services-section">
     <div class="container">
       <div class="row">
         <div class="col-lg-7 mb-5 text-justify">
@@ -416,7 +397,6 @@
     </div>
 
     <div class="services">
-
       <div class="service">
         <h3><strong>Spot-Reparatur</strong><br>&asymp; 175 €</h3>
         <div class="content">
@@ -428,7 +408,7 @@
           </p>
           <br>
           <strong>Reparaturmöglichkeiten am Spot (DuoLive/X-Serie)</strong>:
-          <ul class="ul-check list-unstyled success">
+          <ul class="ul-check list-unstyled">
             <li>SD-Karten-Rettung</li>
             <li>Hardware-Reparatur</li>
             <li>WLAN-Zugangs-Reparatur</li>
@@ -507,7 +487,7 @@
           </p>
           <br>
           <strong>Folgende Änderungen werden angeboten</strong>:
-          <ul class="ul-check list-unstyled success">
+          <ul class="ul-check list-unstyled">
             <li>Freischalten von SSH</li>
             <li>Änderung des Accesspoint-WLAN</li>
             <li>Automatisiertes Neustarten</li>
@@ -524,7 +504,7 @@
           </p>
           <br>
           <strong>Folgende Ersatzteile sind für Vario-Vent X-Serie verfügbar</strong>:
-          <ul class="ul-check list-unstyled success">
+          <ul class="ul-check list-unstyled">
             <li>WLAN-Dongle: 20€</li>
             <li>Steuer-Platine (Spot): 200€</li>
             <li>Steuer-Platine (Lüfter): 100€</li>
@@ -543,7 +523,7 @@
           </p>
           <br>
           <strong>Folgende Ersatzteile sind für Vario-Vent DuoLive (alt) verfügbar</strong>:
-          <ul class="ul-check list-unstyled success">
+          <ul class="ul-check list-unstyled">
             <li>WLAN-Dongle: 20€</li>
             <li>Steuer-Platine (Spot): 180€</li>
             <li>Sensor-Platine (DuoLive): 65€</li>
@@ -562,7 +542,7 @@
           </p>
           <br>
           <strong>Folgende Ersatzteile sind für Vario-Vent MonoSmart verfügbar</strong>:
-          <ul class="ul-check list-unstyled success">
+          <ul class="ul-check list-unstyled">
             <li>WLAN-Dongle: 20€</li>
             <li>Steuer-Platine (Spot): 180€</li>
             <li>Sensor-Platine (MonoSmart): 50€</li>
@@ -575,10 +555,10 @@
     </div>
   </div>
 
-  <div class="site-section bg-light" id="partner-section" data-aos="fade">
+  <div class="bg-light" id="partner-section">
     <div class="container">
       <div class="row">
-        <div class="col-lg-7 mb-5 text-justify">
+        <div class="col-lg-7 mt-4">
           <h2 class="section-title">Unsere Partner...</h2>
         </div>
       </div>
@@ -596,122 +576,116 @@
     </div>
   </div>
 
-  <div class="site-section" id="contact-section" data-aos="fade">
-    <div class="container">
-      <div class="row align-items-start justify-content-md-center form-container">
-        <div class="col-md-6 order-1 order-md-2 mb-5 mb-md-0 mt-md-5">
-          <img src="images/Ueberblick_Service.PNG" alt="Überblick Service" class="img-fluid">
-        </div>
-        <div class="col-md-6 mr-auto order-2 order-md-1">
-          <h2 class="section-title mb-3">Kontaktieren Sie uns ...</h2>
-          <p class="mb-5 text-justify">
-            ... doch ganz unverbindlich, wenn Sie Fragen zu unseren Dienstleistungen oder schon konkrete Wünsche
-            haben!
+  <div class="container my-4" id="contact-section">
+    <div class="row align-items-start justify-content-md-center form-container">
+      <div class="col-md-6 order-1 order-md-2 mb-5 mb-md-0 mt-md-5">
+        <img src="images/Ueberblick_Service.PNG" alt="Überblick Service" class="img-fluid">
+      </div>
+      <div class="col-md-6 me-auto order-2 order-md-1">
+        <h2 class="section-title mb-3">Kontaktieren Sie uns ...</h2>
+        <p class="mb-5 text-justify">
+          ... doch ganz unverbindlich, wenn Sie Fragen zu unseren Dienstleistungen oder schon konkrete Wünsche
+          haben!
 
-            <strong>Wir freuen uns darauf, Ihre Vario-Vent-Lüftung zu reparieren!</strong>
-          </p>
-          <p class="mb-5 text-justify">
-            <strong>TIPP:</strong>
-            Halten Sie für Rückfragen Bilder der Fehlermeldungen, des Typenschildes oder des Defektes bereit.
-            Schreiben Sie Ihre Anfrage außerdem stets so konkret und detailreich wie möglich!
-            <br>
-            Achten Sie bitte auch auf die Korrektheit der angegebenen Daten,
-            da diese unter anderem für den Versand benötigt werden!
-          </p>
-          <form id="submit-form" method="get" target="hidden_iframe" onsubmit="submitted=true;">
-            <div class="row">
-              <div class="col-md-6 mb-4">
-                <label>Vorname</label>
-                <input type="text" class="form-control" placeholder="Vorname" name="entry.1232820375" required>
-              </div>
-              <div class="col-md-6">
-                <label>Nachname</label>
-                <input type="text" class="form-control" placeholder="Nachname" name="entry.1952801126" required>
-              </div>
+          <strong>Wir freuen uns darauf, Ihre Vario-Vent-Lüftung zu reparieren!</strong>
+        </p>
+        <p class="mb-5 text-justify">
+          <strong>TIPP:</strong>
+          Halten Sie für Rückfragen Bilder der Fehlermeldungen, des Typenschildes oder des Defektes bereit.
+          Schreiben Sie Ihre Anfrage außerdem stets so konkret und detailreich wie möglich!
+          <br>
+          Achten Sie bitte auch auf die Korrektheit der angegebenen Daten,
+          da diese unter anderem für den Versand benötigt werden!
+        </p>
+        <form id="submit-form" method="get" target="hidden_iframe" onsubmit="submitted=true;" class="col">
+          <div class="row mb-3 input-group g-0">
+            <div class="form-floating col-md-6">
+              <input type="text" class="form-control" placeholder="Vorname" name="entry.1232820375" required
+                     id="firstname">
+              <label for="firstname">Vorname</label>
             </div>
-            <div class="row">
-              <div class="col-md-6 mb-4">
-                <label>Straße &amp; Hausnummer</label>
-                <input type="text" class="form-control" placeholder="Straße &amp; Hausnummer" name="entry.2117783189"
-                       required>
-              </div>
-              <div class="col-md-6">
-                <label>PLZ &amp; Stadt</label>
-                <input type="text" class="form-control" placeholder="PLZ &amp; Stadt" name="entry.581057747" required>
-              </div>
+            <div class="form-floating col-md-6 g-0">
+              <input type="text" class="form-control" placeholder="Nachname" name="entry.1952801126" required
+                     id="lastname">
+              <label for="lastname">Nachname</label>
             </div>
-            <div class="row">
-              <div class="col-md-6 mb-4">
-                <label>E-Mail</label>
-                <input type="email" class="form-control" placeholder="E-Mail" name="entry.696226604" required>
-              </div>
-              <div class="col-md-6">
-                <label>Handynummer</label>
-                <input type="text" class="form-control" placeholder="Handynummer" name="entry.1692333155" required>
-              </div>
+          </div>
+          <div class="row mb-3 input-group g-0">
+            <div class="form-floating col-md-6">
+              <input type="text" class="form-control" placeholder="Straße &amp; Hausnummer" name="entry.2117783189"
+                     required id="street">
+              <label for="street">Straße &amp; Hausnummer</label>
             </div>
-            <div class="row">
-              <div class="col-md-6 mb-4">
-                <label>Lüfter-Variante</label>
-                <select class="form-control" name="entry.795686967" required>
-                  <option value="DuoSmart">DuoSmart</option>
-                  <option value="MonoSmart">MonoSmart</option>
-                  <option value="DuoLive (alt)">DuoLive (alt)</option>
-                  <option value="DuoLive (X-Serie)">DuoLive (X-Serie)</option>
-                </select>
-              </div>
-              <div class="col-md-6">
-                <label>Dienstleistung</label>
-                <select class="form-control" name="entry.1034850649" required>
-                  <option value="Reparatur">Reparatur</option>
-                  <option value="Ersatzteil">Ersatzteil</option>
-                  <option value="Beratung">Beratung</option>
-                </select>
-              </div>
+            <div class="form-floating col-md-6">
+              <input type="text" class="form-control" placeholder="PLZ &amp; Stadt" name="entry.581057747" required
+                     id="city">
+              <label for="city">PLZ &amp; Stadt</label>
             </div>
-            <div class="form-group row">
-              <div class="col-md-12 mt-sm-2">
-                <label>Nachricht</label>
-                <textarea class="form-control" cols="30" rows="10"
+          </div>
+          <div class="row mb-3 input-group g-0">
+            <div class="form-floating col-md-6">
+              <input type="email" class="form-control" placeholder="E-Mail" name="entry.696226604" required
+                     id="email">
+              <label for="email">E-Mail</label>
+            </div>
+            <div class="form-floating col-md-6">
+              <input type="text" class="form-control" placeholder="Handynummer" name="entry.1692333155" required
+                     id="phonenumber">
+              <label for="phonenumber">Handynummer</label>
+            </div>
+          </div>
+          <div class="row mb-3 input-group g-0">
+            <div class="form-floating col-md-6">
+              <select class="form-select" name="entry.795686967" required id="type">
+                <option value="DuoSmart">DuoSmart</option>
+                <option value="MonoSmart">MonoSmart</option>
+                <option value="DuoLive (alt)">DuoLive (alt)</option>
+                <option value="DuoLive (X-Serie)">DuoLive (X-Serie)</option>
+              </select>
+              <label for="type">Lüfter-Variante</label>
+            </div>
+            <div class="form-floating col-md-6">
+              <select class="form-select" name="entry.1034850649" required id="service">
+                <option value="Reparatur">Reparatur</option>
+                <option value="Ersatzteil">Ersatzteil</option>
+                <option value="Beratung">Beratung</option>
+              </select>
+              <label for="service">Dienstleistung</label>
+            </div>
+          </div>
+          <div class="row mb-3 g-0">
+            <div class="form-floating col-md-12 mt-sm-2">
+                <textarea class="form-control" cols="30" rows="10" style="height: 150px" id="message"
                           placeholder="Hier haben wir etwas Platz für Ihre Nachricht an uns reserviert..."
                           name="entry.436050511" required></textarea>
-              </div>
+              <label for="message">Nachricht</label>
             </div>
-            <div class="form-group row">
-              <div class="col-md-12" id="captcha">
-                <label id="question"></label>
-                <input id="answer" type="number" class="form-control" placeholder="Antwort" name="captcha" required>
-              </div>
+          </div>
+          <div class="row mb-3 g-0">
+            <div class="form-floating col-md-12" id="captcha">
+              <input id="answer" type="number" class="form-control" placeholder="Antwort" name="captcha" required>
+              <label id="question" for="answer"></label>
             </div>
-            <div class="row">
-              <input id="contact-form-submit" type="submit" class="btn btn-primary py-3 px-5 mx-3 btn-block"
-                     value="Senden der Nachricht">
-            </div>
-          </form>
-          <iframe name="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
-        </div>
+          </div>
+          <div class="row g-0">
+            <input id="contact-form-submit" type="submit" class="btn btn-primary py-3 px-5my-3"
+                   value="Senden der Nachricht">
+          </div>
+        </form>
+        <iframe name="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
       </div>
     </div>
   </div>
 
-
-  <div class="site-section bg-light" id="faq-section" data-aos="fade">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-7 mb-5 text-justify">
-          <h2 class="section-title">FAQ</h2>
-        </div>
-      </div>
-    </div>
+  <div class="my-4 bg-light pt-3" id="faq-section">
+    <h2 class="section-title">FAQ</h2>
     <div class="services">
-
       <div class="service">
         <h3>Was sind die häufigsten Fehlerursachen bei den Systemen von Vario Vent?</h3>
-        Über die Zeit haben wir festgestellt, dass sich bestimmte Fehler beim Vario-Vent-System häufen.
-        Hier haben wir die häufigsten Fehler aufgelistet.
-
         <div class="content">
-          <ol class="ul-check list-unstyled success">
+          <p>Über die Zeit haben wir festgestellt, dass sich bestimmte Fehler beim Vario-Vent-System häufen.
+            Hier haben wir die häufigsten Fehler aufgelistet.</p>
+          <ol class="ul-check list-unstyled">
             <li>Defekt des Spots</li>
             <li>Kurzschluss der Sensorplatine</li>
             <li>Überlastung des Netzteils</li>
@@ -832,7 +806,6 @@
         </div>
       </div>
 
-
       <div class="service">
         <h3>Ich möchte die Bauteile selber drucken. Wo bekomme ich die STL-Dateien her?</h3>
         <div class="content">
@@ -840,62 +813,40 @@
           Diese sind für den privaten Gebrauch frei verfügbar.
           Zu diesem Schritt haben wir uns entschieden, weil wir langfristig die Verfügbarkeit von Ersatzteilen
           sicherstellen wollen.<br><br>
-
           <strong>Folgende Druck-Objekte sind veröffentlicht</strong>:
-          <ul class="ul-check list-unstyled success">
+          <ul class="ul-check list-unstyled">
             <li><a href="https://www.thingiverse.com/thing:5144441">Wandadapter (Thingiverse-Link)</a></li>
             <li><a href="https://www.thingiverse.com/thing:5147986">Filterhalterung (Thingiverse-Link)</a></li>
             <li><a href="https://www.thingiverse.com/thing:5148011">Schutzkappe (Thingiverse-Link)</a></li>
           </ul>
         </div>
       </div>
-
     </div>
   </div>
 
 
-  <div class="site-section" id="download-section" data-aos="fade">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-7 mb-5 text-justify">
-          <h2 class="section-title">Downloads</h2>
-        </div>
-      </div>
-    </div>
-    <div class="services">
-      <a href="downloads/Anleitung_Ausbau_Platinen_DuoLive.pdf" class="btn btn-primary" target="_blank"
+  <div class="my-4" id="download-section">
+    <h2 class="section-title">Downloads</h2>
+    <div class="container d-flex flex-column">
+      <a href="downloads/Anleitung_Ausbau_Platinen_DuoLive.pdf" class="btn btn-primary m-3" target="_blank"
          role="button">
-        <h5 class="m-2">Ausbauanleitung DuoLive-Sensor</h5>
+        <h5 class="m-2 pdf">&nbsp;&nbsp;Ausbauanleitung DuoLive-Sensor</h5>
       </a>
-    </div>
-    <br>
-    <br>
-    <div class="services">
-      <a href="downloads/Anleitung_XSerie_Sensorplatine_Bausatz.pdf" class="btn btn-primary" target="_blank"
+      <a href="downloads/Anleitung_XSerie_Sensorplatine_Bausatz.pdf" class="btn btn-primary m-3" target="_blank"
          role="button">
-        <h5 class="m-2">Bauanleitung für X-Serien-Sensorplatine (DIY-Kit)</h5>
+        <h5 class="m-2 pdf">&nbsp;&nbsp;Bauanleitung für X-Serien-Sensorplatine (DIY-Kit)</h5>
       </a>
-    </div>
-    <br>
-    <br>
-    <div class="services">
-      <a href="downloads/Anleitung_XSerie_Jailbreak.pdf" class="btn btn-primary" target="_blank"
+      <a href="downloads/Anleitung_XSerie_Jailbreak.pdf" class="btn btn-primary m-3" target="_blank"
          role="button">
-        <h5 class="m-2">Anleitung für X-Serien-Jailbreak</h5>
+        <h5 class="m-2 pdf">&nbsp;&nbsp;Anleitung für X-Serien-Jailbreak</h5>
       </a>
     </div>
   </div>
 
 
-  <div class="site-section" id="videos-section" data-aos="fade">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-7 mb-5 text-justify">
-          <h2 class="section-title">Videos</h2>
-        </div>
-      </div>
-    </div>
-    <div class="services">
+  <div class="my-4" id="videos-section">
+    <h2 class="section-title">Videos</h2>
+    <div class="container services">
       <div class="service">
         <iframe width="100%"
                 height="100%"
@@ -929,7 +880,7 @@
     </div>
   </div>
 
-  <footer class="footer-section bg-primary">
+  <footer class="footer-section bg-primary pt-5">
     <div class="container text-white">
       <div class="col">
         <div class="row">
@@ -1090,7 +1041,7 @@
           </div>
 
           <div class="col-md-3">
-            <div class="col-md-3 ml-auto">
+            <div class="col-md-3 ms-auto">
               <ul class="list-unstyled footer-links">
                 <li><a href="#home-section" class="footer-links"><strong>Willkommen</strong></a></li>
                 <li><a href="#photos" class="footer-links"><strong>Galerie</strong></a></li>
@@ -1099,13 +1050,11 @@
                 <li><a href="#faq-section" class="footer-links"><strong>FAQ</strong></a></li>
                 <li><a href="#download-section" class="footer-links"><strong>Download</strong></a></li>
                 <li><a href="#videos-section" class="footer-links"><strong>Videos</strong></a></li>
-
                 <li><a href="javascript:" class="footer-links" data-fancybox
                        data-src="#legal"><strong>Impressum</strong></a></li>
                 <li><a href="javascript:" class="footer-links" data-fancybox data-src="#agb"><strong>AGB</strong></a>
                 </li>
-                <li><a href="javascript:" class="footer-links" data-fancybox
-                       data-src="#data-security"><strong>Datenschutz</strong></a>
+                <li><a href="javascript:" class="footer-links" data-fancybox data-src="#data-security"><strong>Datenschutz</strong></a>
                 </li>
               </ul>
             </div>
@@ -1727,7 +1676,7 @@
               <p>
                 Copyright &copy;
                 <script>
-                  document.write(new Date().getFullYear());
+                  document.write(new Date().getFullYear().toString());
                 </script>
                 <br>
                 Alle Rechte sind der <strong>Kirschner Christoph Josef, Röhrl Maximilian Manfred GbR</strong>
