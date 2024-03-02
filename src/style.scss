@@ -50,6 +50,11 @@ $theme-colors: (
   content: "\f1c1";
 }
 
+.arrows:before {
+  font-family: "icomoon" !important;
+  content: "\f124";
+}
+
 body {
   line-height: 1.7;
   color: var(--bs-gray-700);

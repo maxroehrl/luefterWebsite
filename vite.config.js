@@ -1,7 +1,8 @@
 import {defineConfig} from 'vite';
 import {ViteFaviconsPlugin} from 'vite-plugin-favicon2';
 import inject from '@rollup/plugin-inject';
-import legacy from '@vitejs/plugin-legacy'
+import legacy from '@vitejs/plugin-legacy';
+import {resolve} from 'path';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -37,5 +38,11 @@ export default defineConfig({
   build: {
     emptyOutDir: true,
     outDir: '../docs',
+    rollupOptions: {
+      input: {
+        main: resolve(__dirname, 'src/index.html'),
+        'vario-vent': resolve(__dirname, 'src/vario-vent/index.html'),
+      }
+    }
   },
 });
