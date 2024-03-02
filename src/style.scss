@@ -55,6 +55,10 @@ $theme-colors: (
   content: "\f124";
 }
 
+html, body, .site-wrap {
+  height: 100%;
+}
+
 body {
   line-height: 1.7;
   color: var(--bs-gray-700);
